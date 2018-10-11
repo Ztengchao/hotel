@@ -62,18 +62,78 @@
     <!--头部结束-->
     <!--主体开始-->
     <div class="main">
-        <div style="width: 50%;">
+        <div class="main_div">
             <div>
-                <h3 style="font-size: 24px; padding-bottom: 2px; padding-top: 2px; margin-left: 20px; margin-bottom: 8px; color: black; font-weight: 800">推荐酒店</h3>
+                <h3 class="main_div_h">推荐酒店</h3>
             </div>
         </div>
         <div>
             <div class="select">
-                <div>
-                    <div>
-                        <img src="resource/images/SaleRemit_pic01_20160601.jpg" alt=""/>
+                <div class="select_div">
+                    <div class="select_div_div">
+                        <img src="resource/images/SaleRemit_pic01_20160601.jpg" alt="" />
                     </div>
-                    <div>
+                    <div class="select_div_div2">
+                        <a href="http://www.baidu.com">
+                            每晚50
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="select">
+                <div class="select_div">
+                    <div class="select_div_div">
+                        <img src="resource/images/SaleRemit_pic01_20160601.jpg" alt="" />
+                    </div>
+                    <div class="select_div_div2">
+                        <a href="http://www.baidu.com">
+                            每晚50
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="select">
+                <div class="select_div">
+                    <div class="select_div_div">
+                        <img src="resource/images/SaleRemit_pic01_20160601.jpg" alt="" />
+                    </div>
+                    <div class="select_div_div2">
+                        <a href="http://www.baidu.com">
+                            每晚50
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="select">
+                <div class="select_div">
+                    <div class="select_div_div">
+                        <img src="resource/images/SaleRemit_pic01_20160601.jpg" alt="" />
+                    </div>
+                    <div class="select_div_div2">
+                        <a href="http://www.baidu.com">
+                            每晚50
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="select">
+                <div class="select_div">
+                    <div class="select_div_div">
+                        <img src="resource/images/SaleRemit_pic01_20160601.jpg" alt="" />
+                    </div>
+                    <div class="select_div_div2">
+                        <a href="http://www.baidu.com">
+                            每晚50
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="select">
+                <div class="select_div">
+                    <div class="select_div_div">
+                        <img src="resource/images/SaleRemit_pic01_20160601.jpg" alt="" />
+                    </div>
+                    <div class="select_div_div2">
                         <a href="http://www.baidu.com">
                             每晚50
                         </a>
