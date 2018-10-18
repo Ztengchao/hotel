@@ -68,18 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Light\default.css" />
+    <Content Include="Global.asax" />
     <Content Include="js\jquery.js" />
-    <Content Include="resource\images\SaleRemit_pic01_20160601.jpg" />
-    <Content Include="resource\images\SaleRemit_pic01_20160603.jpg" />
-    <Content Include="resource\images\SaleRemit_pic01_20160604.jpg" />
-    <Content Include="resource\images\SaleRemit_pic02_20160106.jpg" />
-    <Content Include="resource\images\search.png" />
+    <Content Include="resource\images\home_light.png" />
+    <Content Include="resource\images\search_light.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="contentx.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Home.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Common.cs" />
@@ -90,14 +88,10 @@
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="contentx.aspx.cs">
-      <DependentUpon>contentx.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="contentx.aspx.designer.cs">
-      <DependentUpon>contentx.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,9 +106,17 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.Master" />
+    <Content Include="App_Themes\Light\default.skin" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -25,12 +25,17 @@ namespace WEB
 
 		protected void Login_Click(object sender, EventArgs e)
 		{
-			//TODO 弹出登录界面
+			Response.Redirect("~/Login.aspx");
 		}
 
 		protected void Register_Click(object sender, EventArgs e)
 		{
-			//TODO 弹出注册界面
+			Response.Redirect("~/Register.aspx");
+		}
+
+		protected void home_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+		{
+			Response.Redirect("Home.aspx");
 		}
 	}
 }

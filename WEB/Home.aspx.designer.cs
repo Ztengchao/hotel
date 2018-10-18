@@ -10,6 +10,6 @@
 namespace WEB {
     
     
-    public partial class WebForm1 {
+    public partial class WebForm4 {
     }
 }

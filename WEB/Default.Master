@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>XXX酒店预订</title>
     <script src="js/jquery.js" type="text/javascript"></script>
 </head>
@@ -30,39 +30,40 @@
     })
 </script>
 <body>
-    <form id="form1" runat="server">
-        <!--头部开始-->
-        <div id="header" class="header">
-            <!--搜索框部分-->
-            <div class="header_search">
-                <div class="header_search_top"></div>
-                <div class="header_search_pic_div">
-                    <img alt="搜索符号" src="resource/images/search.png" class="header_search_pic" />
-                </div>
-                <div class="header_search_textbox_div">
-                    <div class="header_search_textbox">
-                        <asp:TextBox ID="Search_Textbox" Text="搜索" CssClass="header_search_textbox_content" runat="server" Wrap="False" OnTextChanged="Search_Textbox_TextChanged" />
-                    </div>
-                </div>
-            </div>
-            <!--搜索框部分结束-->
-            <!--登录注册-->
-            <div class="header_right">
-                <ul class="header_right_ul">
-                    <li style="float: right">
-                        <asp:Button ID="Login" runat="server" Text="登录" CssClass="header_right_ul_btn" OnClick="Login_Click" />
-                    </li>
-                    <li style="float: right">
-                        <asp:Button ID="Register" runat="server" Text="注册" CssClass="header_right_ul_btn" OnClick="Register_Click" />
-                    </li>
-                </ul>
-            </div>
-            <!--登录注册结束-->
+<form id="form1" runat="server">
+    <!--头部开始-->
+    <div id="header" class="header">
+        <!--返回主页-->
+        <div class="header_home">
+            <asp:ImageButton runat="server" ID="home" SkinID="back_home" OnClick="home_Click"/>
         </div>
-        <!--头部结束-->
-        <!--主体部分-->
-        <asp:ContentPlaceHolder ID="body" runat="server" />
-        <!--主体结束-->
-    </form>
+        <!--搜索框部分-->
+        <div class="header_search">
+            <div class="header_search_top"></div>
+            <div class="header_search_pic_div">
+                <asp:Image runat="server" ID="Search_Image" SkinID="Search_pic"/>
+            </div>
+            <div class="header_search_textbox_div">
+                <div class="header_search_textbox">
+                    <asp:TextBox ID="Search_Textbox" SkinID="Search_Textbox" runat="server" OnTextChanged="Search_Textbox_TextChanged"/>
+                </div>
+            </div>
+        </div>
+        <!--登录注册-->
+        <div class="header_right">
+            <ul class="header_right_ul">
+                <li style="float: right">
+                    <asp:Button ID="Login" runat="server" Text="登录" CssClass="header_right_ul_btn" OnClick="Login_Click"/>
+                </li>
+                <li style="float: right">
+                    <asp:Button ID="Register" runat="server" Text="注册" CssClass="header_right_ul_btn" OnClick="Register_Click"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr class="main_hr"/>
+    <!--主体部分-->
+    <asp:ContentPlaceHolder ID="body" runat="server"/>
+</form>
 </body>
 </html>

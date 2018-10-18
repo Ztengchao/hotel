@@ -1,0 +1,19 @@
+﻿<%--
+默认的外观模板。以下外观仅作为示例提供。
+
+1. 命名的控件外观。SkinId 的定义应唯一，因为在同一主题中不允许一个控件类型有重复的 SkinId。
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. 默认外观。未定义 SkinId。在同一主题中每个控件类型只允许有一个默认的控件外观。
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:Image SkinID="Search_pic" CssClass="header_search_pic" runat="server" AlternateText="搜索" ImageUrl="~/resource/images/search_light.png"/>
+<asp:TextBox SkinID="Search_Textbox" Text="搜索" CssClass="header_search_textbox_content" runat="server" Wrap="False"/>
+<asp:ImageButton runat="server" SkinID="back_home" CssClass="header_home_img" Height="24px" ImageUrl="~/resource/images/home_light.png"/>
+
+

@@ -1,6 +1,20 @@
-﻿.header {
+﻿body { min-width: 1000px; }
+
+.header {
     height: 80px;
     background-color: white
+}
+
+.header_home {
+    float: left;
+    width: auto;
+    height: 80px;
+}
+
+.header_home_img {
+    margin-top: 27px;
+    margin-left: 20px;
+    margin-right: 5px;
 }
 
 .header_search {
@@ -8,9 +22,7 @@
     float: left;
 }
 
-.header_search_top {
-    height: 16px;
-}
+.header_search_top { height: 16px; }
 
 .header_search_pic {
     height: 22px;
@@ -99,13 +111,13 @@
     height: 39px;
 }
 
+.main_hr { width: 100%; }
+
 .main {
     padding-left: 5%;
     max-width: 90%;
 }
-.main_div {
-    width: 50%;
-}
+
 .main_div_h {
     font-size: 24px;
     padding-bottom: 2px;
@@ -115,25 +127,16 @@
     color: black;
     font-weight: 800
 }
-.select {
-    width: 33.333%;
-    height: 345px;
-    float: left;
+
+.login {
+    background-color: white;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
-.select_div {
-    height: 100%;
-    padding: 0 8px 12px 8px;
-}
-.select_div_div { height: 80% }
-    .select_div_div img {
-        height: 100%;
-        width: 100%;
-    }
-.select_div_div2 {
-    height: 20%;
-    padding-top: 10px;
-}
-.select_div_div2 a {
-    color: black;
-    font-weight: bold;
+
+.login_btn {
+    margin-right: 100px;
+    margin-bottom: 50px;
 }
