@@ -15,7 +15,7 @@ namespace WEB
 			if ("搜索" == Search_Textbox.Text)
 			{
 				Search_Textbox.CssClass = "header_search_textbox_content";
-				//TODO 返回主页
+				Response.Redirect("~/Home.aspx");
 				return;
 			}
 
@@ -23,19 +23,13 @@ namespace WEB
 			//TODO 根据输入进行搜索
 		}
 
-		protected void Login_Click(object sender, EventArgs e)
-		{
-			Response.Redirect("~/Login.aspx");
-		}
+		protected void Login_Click(object sender, EventArgs e) 
+			=> Response.Redirect("~/Login.aspx");
 
 		protected void Register_Click(object sender, EventArgs e)
-		{
-			Response.Redirect("~/Register.aspx");
-		}
+			=> Response.Redirect("~/Register.aspx");
 
-		protected void home_Click(object sender, System.Web.UI.ImageClickEventArgs e)
-		{
-			Response.Redirect("Home.aspx");
-		}
+		protected void Home_Click(object sender, System.Web.UI.ImageClickEventArgs e)
+			=> Response.Redirect("~/Home.aspx");
 	}
 }

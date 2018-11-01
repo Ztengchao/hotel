@@ -140,3 +140,16 @@
     margin-right: 100px;
     margin-bottom: 50px;
 }
+
+.register {
+
+}
+.register tr {
+    height:40px
+}
+.register tr td {
+    text-align: right;
+}
+.register_text {
+    margin-left: 100px
+}
