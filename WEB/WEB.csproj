@@ -67,11 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.html" />
     <Content Include="App_Themes\Light\default.css" />
     <Content Include="Global.asax" />
     <Content Include="js\jquery.js" />
+    <Content Include="resource\images\404.jpg" />
     <Content Include="resource\images\home_light.png" />
     <Content Include="resource\images\search_light.png" />
+    <Content Include="resource\Province.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

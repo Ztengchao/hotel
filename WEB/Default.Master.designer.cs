@@ -58,6 +58,15 @@ namespace WEB {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl top_right;
         
         /// <summary>
+        /// login_register 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl login_register;
+        
+        /// <summary>
         /// Login 控件。
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace WEB {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Register;
+        
+        /// <summary>
+        /// myprofile 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl myprofile;
         
         /// <summary>
         /// body 控件。

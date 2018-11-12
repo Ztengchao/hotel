@@ -51,7 +51,7 @@
             </div>
             <!--登录注册-->
             <div id = "top_right" runat="server" class="header_right">
-                <ul class="header_right_ul">
+                <ul id="login_register" runat="server" class="header_right_ul" Visible="True">
                     <li style="float: right">
                         <asp:Button ID="Login" runat="server" Text="登录" CssClass="header_right_ul_btn" OnClick="Login_Click" />
                     </li>
@@ -59,6 +59,7 @@
                         <asp:Button ID="Register" runat="server" Text="注册" CssClass="header_right_ul_btn" OnClick="Register_Click" />
                     </li>
                 </ul>
+                <div id="myprofile" runat="server" Visible="False"></div>
             </div>
         </div>
         <hr class="main_hr" />

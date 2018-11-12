@@ -6,6 +6,17 @@ namespace WEB
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			//if (Session["login-statute"] != null)
+			//{
+			//	login_register.Visible = false;
+			//	myprofile.Visible = true;
+			//}
+			//else
+			//{
+			//	login_register.Visible = true;
+			//	myprofile.Visible = false;
+			//}
+			//TODO 根据session来判断登陆按钮是否显示和个人信息
 		}
 
 		protected void Search_Textbox_TextChanged(object sender, EventArgs e)
@@ -23,7 +34,7 @@ namespace WEB
 			//TODO 根据输入进行搜索
 		}
 
-		protected void Login_Click(object sender, EventArgs e) 
+		protected void Login_Click(object sender, EventArgs e)
 			=> Response.Redirect("~/Login.aspx");
 
 		protected void Register_Click(object sender, EventArgs e)
