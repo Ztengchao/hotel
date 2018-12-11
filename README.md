@@ -1,5 +1,5 @@
 * hotel  
-  * [1 创建sqlserver储存库]((#创建sqlserver数据库))             
+  * [1 创建sqlserver储存库](#创建sqlserver数据库)             
   
   
   
