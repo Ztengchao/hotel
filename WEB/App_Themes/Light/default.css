@@ -1,24 +1,25 @@
 ﻿body { min-width: 1000px; }
 
 .header {
-    height: 80px;
+    height: 40px;
     background-color: white
 }
 
 .header_home {
     float: left;
     width: auto;
-    height: 80px;
+    /*height: 80px;*/
+    height: 40px;
 }
 
 .header_home_img {
-    margin-top: 27px;
+    margin-top: 8px;
     margin-left: 20px;
     margin-right: 5px;
 }
 
 .header_search {
-    height: 80px;
+    height: 40px;
     float: left;
 }
 
@@ -26,22 +27,22 @@
 
 .header_search_pic {
     height: 22px;
-    margin-top: 11px;
+    margin-top: 9px;
     margin-left: 4px;
 }
 
 .header_search_pic_div {
     width: 28px;
-    height: 45px;
+    height: 40px;
     background-color: white;
     float: left;
     margin-left: 16px;
-    border-top-left-radius: 10px;
+    /*border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-style: solid;
     border-color: gray;
     border-right-color: white;
-    border-width: 1px;
+    border-width: 1px;*/
 }
 
 .header_search_textbox {
@@ -50,13 +51,13 @@
     margin-top: 11px;
 }
 
-.header_search_textbox_content {
+/*.header_search_textbox_content {
     background-color: white;
     height: 16px;
     Width: 382px;
     color: grey;
     border-style: none;
-}
+}*/
 
 .header_search_textbox_content_focus {
     background-color: white;
@@ -88,18 +89,18 @@
 
 .header_right {
     float: right;
-    height: 80px
+    height: 40px
 }
 
 .header_right_ul {
     list-style: none;
-    height: 80px;
+    height: 40px;
     width: 180px;
     margin-top: 0
 }
 
 .header_right_ul_btn {
-    margin-top: 18px;
+    /*margin-top: 18px;*/
     cursor: pointer;
     border-style: none;
     width: 60px;
@@ -109,6 +110,13 @@
     font-size: large;
     color: black;
     height: 39px;
+}
+
+.header_logined_in {
+    border-style: none;
+    outline: 0;
+    height: 39px;
+    cursor: pointer;
 }
 
 .main_hr { width: 100%; }
@@ -131,6 +139,7 @@
 .login {
     background-color: white;
     width: 500px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -152,4 +161,9 @@
 }
 .register_text {
     margin-left: 100px
+}
+.name {
+    height: 39px;
+    border-style: none;
+    text-align: right;
 }

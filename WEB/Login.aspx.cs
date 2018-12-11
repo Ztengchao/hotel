@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Web;
 using System.Web.UI.WebControls;
+using WEB.Class;
 
 namespace WEB
 {
@@ -9,24 +11,28 @@ namespace WEB
 		{
 
 		}
-
-		protected void Login_box_Authenticate(object sender, AuthenticateEventArgs e)
+		protected void LoginButton_Click(object sender, EventArgs e) 
+			=> Response.Redirect("Home.aspx");
+		protected void CheckLogin_ServerValidate(object source, ServerValidateEventArgs args)
 		{
-			//if (Login_box.Password == "10010" && Login_box.UserName == "10086")
-			//	e.Authenticated = true;
-			//else
-			//{
-			//	e.Authenticated = false;
-			//}
-			//TODO 在数据库中查找用户名密码判断是否登录成功
-		}
+			try
+			{
+				var user = UserManager.GetUserByUsername(UserName.Text.Trim()); //获取用户
+				args.IsValid = user.Password == Password.Text.Trim(); //根据密码是否相等判断是否成功登录
+				if (args.IsValid) //成功验证加入到session中
+				{
+					Session.Add("user", user);
+				}
 
-		protected void Login_box_LoggedIn(object sender, EventArgs e)
-		{
-			//if (Session["login-statute"] != null)
-			//	Session.Remove("login-statute");
-			//Session.Add("login-statute", 1);
-			//TODO 在session中添加各种用户信息
+				if (!RememberMe.Checked) return;
+				var httpCookie = new HttpCookie("user") {Expires = DateTime.Now.AddDays(7)}; //7日后过期
+				httpCookie.Values["username"] = ((User) Session["user"]).Username;
+				httpCookie.Values["password"] = ((User) Session["user"]).Password;
+			}
+			catch
+			{
+				args.IsValid = false;
+			}
 		}
 	}
 }

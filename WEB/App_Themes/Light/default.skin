@@ -12,8 +12,6 @@
 <asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
 --%>
 
-<asp:Image SkinID="Search_pic" CssClass="header_search_pic" runat="server" AlternateText="搜索" ImageUrl="~/resource/images/search_light.png"/>
-<asp:TextBox SkinID="Search_Textbox" Text="搜索" CssClass="header_search_textbox_content" runat="server" Wrap="False"/>
+<asp:ImageButton SkinID="Search_pic" CssClass="header_search_pic" runat="server" AlternateText="搜索" ImageUrl="~/resource/images/search_light.png"/>
 <asp:ImageButton runat="server" SkinID="back_home" CssClass="header_home_img" Height="24px" ImageUrl="~/resource/images/home_light.png"/>
-
-
+<asp:Button runat="server" SkinID="loged_in" Font-Underline="True" CssClass="header_logined_in" BackColor="white"/>

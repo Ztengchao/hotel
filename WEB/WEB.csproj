@@ -72,9 +72,11 @@
     <Content Include="Global.asax" />
     <Content Include="js\jquery.js" />
     <Content Include="resource\images\404.jpg" />
+    <Content Include="resource\images\calendar.png" />
     <Content Include="resource\images\home_light.png" />
     <Content Include="resource\images\search_light.png" />
     <Content Include="resource\Province.xml" />
+    <Content Include="Search.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -84,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Common.cs" />
+    <Compile Include="Class\SqlHelper.cs" />
+    <Compile Include="Class\User.cs" />
+    <Compile Include="Class\UserManager.cs" />
     <Compile Include="Default.Master.cs">
       <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -116,11 +121,19 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.Master" />
     <Content Include="App_Themes\Light\default.skin" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

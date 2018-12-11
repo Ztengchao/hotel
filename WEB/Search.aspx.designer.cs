@@ -10,96 +10,132 @@
 namespace WEB {
     
     
-    public partial class Default {
+    public partial class Search {
         
         /// <summary>
-        /// form1 控件。
+        /// ScriptManager1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// Home 控件。
+        /// UpdatePanel1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton Home;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// Search_Image 控件。
+        /// ddlProvince 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton Search_Image;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProvince;
         
         /// <summary>
-        /// top_right 控件。
+        /// ddlCity 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl top_right;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCity;
         
         /// <summary>
-        /// login_register 控件。
+        /// requestedDeliveryDateInput 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl login_register;
+        protected global::System.Web.UI.WebControls.TextBox requestedDeliveryDateInput;
         
         /// <summary>
-        /// Login 控件。
+        /// calendar_show 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Login;
+        protected global::System.Web.UI.WebControls.ImageButton calendar_show;
         
         /// <summary>
-        /// Register 控件。
+        /// calendar 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Register;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl calendar;
         
         /// <summary>
-        /// logined_in 控件。
+        /// requestedDeliveryDateCalendar 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logined_in;
+        protected global::System.Web.UI.WebControls.Calendar requestedDeliveryDateCalendar;
         
         /// <summary>
-        /// name_ 控件。
+        /// requestedDeliveryDateInput2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button name_;
+        protected global::System.Web.UI.WebControls.TextBox requestedDeliveryDateInput2;
         
         /// <summary>
-        /// body 控件。
+        /// calendar_show2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder body;
+        protected global::System.Web.UI.WebControls.ImageButton calendar_show2;
+        
+        /// <summary>
+        /// calendar2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl calendar2;
+        
+        /// <summary>
+        /// requestedDeliveryDateCalendar2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar requestedDeliveryDateCalendar2;
+        
+        /// <summary>
+        /// Search_Textbox 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Search_Textbox;
+        
+        /// <summary>
+        /// Search_Btn 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Search_Btn;
     }
 }
