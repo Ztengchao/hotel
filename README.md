@@ -1,9 +1,9 @@
-* hotel  
+* [hotel](#hotel)
   * [1 创建sqlserver储存库](#创建sqlserver数据库)             
   
   
-  
-# 创建sqlserver数据库
+# hotel
+## 创建sqlserver数据库
 ```
 create database hotel
 go
