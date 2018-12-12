@@ -1,17 +1,18 @@
 ﻿using System;
+using WEB.Class;
 
 namespace WEB
 {
 	public partial class Default : System.Web.UI.MasterPage
 	{
-		private const string ls = "login-statue";
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			if (Session[ls] != null)
+			if (Session["user"] != null)
 			{
 				login_register.Visible = false;
 				logined_in.Visible = true;
+				MyInfor.Text = ((User) Session["user"]).Name;
 			}
 			else
 			{
@@ -19,11 +20,6 @@ namespace WEB
 				login_register.Visible = true;
 				
 			}
-		}
-
-		private void GetName()
-		{
-			var account = Convert.ToString(Session[ls]);
 		}
 
 		//protected void Search_Textbox_TextChanged(object sender, EventArgs e)
@@ -44,18 +40,30 @@ namespace WEB
 		protected void Login_Click(object sender, EventArgs e)
 			=> Response.Redirect("Login.aspx");
 
-		protected void Register_Click(object sender, EventArgs e) => Response.Redirect("Register.aspx");
+		protected void Register_Click(object sender, EventArgs e) 
+			=> Response.Redirect("Register.aspx");
 
 		protected void Home_Click(object sender, System.Web.UI.ImageClickEventArgs e)
-			=> Response.Redirect("Home.aspx");
+			=> Response.Redirect("~/Default.aspx");
 
 		protected void Search_Image_Click(object sender, System.Web.UI.ImageClickEventArgs e)
 			=> Response.Redirect("Search.aspx");
 
+		protected void ToOrder(object sender, EventArgs e) 
+			=> Response.Redirect(""); //TODO 重定向到订单
+
+		protected void MyInfor_Click(object sender, EventArgs e)
+			=> Response.Redirect(""); //TODO 重定向到个人信息
+
 		protected void Log_off(object sender, EventArgs e)
 		{
-			Session.Remove(ls);
-			Response.Redirect("Home.aspx");
+			Session.Remove("user"); //移除登录信息
+			if (Response.Cookies["user"] != null) //移除cookie
+			{
+				Response.Cookies["user"].Expires = DateTime.Now;
+			}
+
+			Response.Redirect("~/Default.aspx");
 		}
 	}
 }

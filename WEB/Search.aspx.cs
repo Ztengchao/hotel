@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Xml;
 namespace WEB
 {
-	public partial class Search : System.Web.UI.Page
+	public partial class WebSearch : System.Web.UI.Page
 	{
 		private readonly string City = "城市";
 

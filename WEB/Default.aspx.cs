@@ -2,7 +2,7 @@
 
 namespace WEB
 {
-	public partial class WebForm4 : Page
+	public partial class WebDefault : Page
 	{
 		
 	}

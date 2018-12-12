@@ -8,27 +8,6 @@
     <title>XXX酒店预订</title>
     <script src="js/jquery.js" type="text/javascript"></script>
 </head>
-<!--搜索框脚本-->
-<%--<script type="text/javascript">
-    $(document).ready(function () {
-        var searchbox = $("#<%= Search_Textbox.ClientID %>");
-        $(searchbox).focus(function () {
-            if (searchbox.val() === "搜索") {
-                searchbox.val("");
-            }
-            searchbox.addClass("header_search_textbox_content_focus");
-        });
-        $(searchbox).blur(function () {
-            if (searchbox.val() === "") {
-                searchbox.val("搜索");
-                this.className = "header_search_textbox_content";
-            } else {
-                this.className = "header_search_textbox_content_coding";
-            }
-
-        });
-    })
-</script>--%>
 <body>
     <form id="form1" runat="server">
         <!--头部开始-->
@@ -43,11 +22,6 @@
                 <div class="header_search_pic_div">
                     <asp:ImageButton runat="server" ID="Search_Image" SkinID="Search_pic" OnClick="Search_Image_Click" />
                 </div>
-                <%--<div class="header_search_textbox_div">
-                    <div class="header_search_textbox">
-                        <asp:TextBox ID="Search_Textbox" SkinID="Search_Textbox" runat="server" OnTextChanged="Search_Textbox_TextChanged" />
-                    </div>
-                </div>--%>
             </div>
             <!--登录注册-->
             <div id="top_right" runat="server" class="header_right">
@@ -64,10 +38,10 @@
                         <asp:Button runat="server" SkinID="loged_in" ForeColor="red" Text="注销" OnClick="Log_off"/>
                     </li>
                     <li style="float: right">
-                        <asp:Button runat="server" SkinID="loged_in" Text="我的订单"/>
+                        <asp:Button runat="server" SkinID="loged_in" Text="我的订单" OnClick="ToOrder"/>
                     </li>
                     <li style="float: right">
-                        <asp:Button runat="server" ID="name_" SkinID="loged_in" Text="昵称"/>
+                        <asp:Button runat="server" ID="MyInfor" SkinID="loged_in" Text="昵称" OnClick="MyInfor_Click"/>
                     </li>
                 </ul>
             </div>

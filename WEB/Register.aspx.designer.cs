@@ -10,7 +10,7 @@
 namespace WEB {
     
     
-    public partial class WebForm3 {
+    public partial class WebRegister {
         
         /// <summary>
         /// Name 控件。

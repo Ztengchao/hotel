@@ -10,7 +10,7 @@
 namespace WEB {
     
     
-    public partial class Search {
+    public partial class WebSearch {
         
         /// <summary>
         /// ScriptManager1 控件。

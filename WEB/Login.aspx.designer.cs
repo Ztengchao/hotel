@@ -10,7 +10,7 @@
 namespace WEB {
     
     
-    public partial class WebForm2 {
+    public partial class WebLogin {
         
         /// <summary>
         /// UserNameLabel 控件。

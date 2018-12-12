@@ -3,7 +3,7 @@ using WEB.Class;
 
 namespace WEB
 {
-	public partial class WebForm3 : System.Web.UI.Page
+	public partial class WebRegister : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -20,7 +20,7 @@ namespace WEB
 			};
 			UserManager.AddUser(user);
 			Session.Add("user", user);
-			Response.Redirect("Home.aspx");
+			Response.Redirect("~/Default.aspx");
 		}
 	}
 }
