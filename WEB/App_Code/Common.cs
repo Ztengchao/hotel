@@ -1,4 +1,4 @@
-﻿namespace WEB.Class
+﻿namespace WEB
 {
 	public class Common
 	{

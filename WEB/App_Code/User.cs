@@ -1,4 +1,4 @@
-﻿namespace WEB.Class
+﻿namespace WEB
 {
 	public class User //用户类
 	{

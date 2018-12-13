@@ -85,10 +85,10 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Common.cs" />
-    <Compile Include="Class\SqlHelper.cs" />
-    <Compile Include="Class\User.cs" />
-    <Compile Include="Class\UserManager.cs" />
+    <Compile Include="App_Code\Common.cs" />
+    <Compile Include="App_Code\SqlHelper.cs" />
+    <Compile Include="App_Code\User.cs" />
+    <Compile Include="App_Code\UserManager.cs" />
     <Compile Include="Default.Master.cs">
       <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

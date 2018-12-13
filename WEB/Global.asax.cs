@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.UI;
-using WEB.Class;
 
 namespace WEB
 {

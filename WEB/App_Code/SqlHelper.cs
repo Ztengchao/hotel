@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace WEB.Class
+namespace WEB
 {
 	/// <summary>
 	/// 用于帮助连接数据库

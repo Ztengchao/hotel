@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace WEB.Class
+namespace WEB
 {
 	public static class UserManager
 	{
