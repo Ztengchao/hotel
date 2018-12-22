@@ -1,4 +1,5 @@
 ﻿using System;
+using WEB.@class;
 
 namespace WEB
 {
@@ -49,10 +50,10 @@ namespace WEB
 			=> Response.Redirect("Search.aspx");
 
 		protected void ToOrder(object sender, EventArgs e) 
-			=> Response.Redirect(""); //TODO 重定向到订单
+			=> Response.Redirect("Order.aspx");
 
 		protected void MyInfor_Click(object sender, EventArgs e)
-			=> Response.Redirect(""); //TODO 重定向到个人信息
+			=> Response.Redirect("Passport.aspx");
 
 		protected void Log_off(object sender, EventArgs e)
 		{

@@ -2,12 +2,12 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace WEB
+namespace WEB.@class
 {
 	/// <summary>
 	/// 用于帮助连接数据库
 	/// </summary>
-	public class SqlHelper
+	public static class SqlHelper
 	{
 		private static readonly string connStr = ConfigurationManager.ConnectionStrings["hotel"].ConnectionString;
 		/// <summary>
@@ -42,8 +42,10 @@ namespace WEB
 		{
 			using (var conn = new SqlConnection(connStr))
 			{
-				using (var cmd = new SqlCommand(sql, conn))
+				using (var cmd = new SqlCommand())
 				{
+					cmd.Connection = conn;
+					cmd.CommandText = sql;
 					cmd.CommandType = type;
 					if (pars != null)
 					{

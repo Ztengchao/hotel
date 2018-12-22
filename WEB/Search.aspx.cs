@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Xml;
 namespace WEB
 {
-	public partial class WebSearch : System.Web.UI.Page
+	public partial class WebSearch : Page
 	{
 		private readonly string City = "城市";
 
@@ -20,7 +16,6 @@ namespace WEB
 		}
 		//中国省份城市级联选择
 		//作者：lori
-		//来源：CSDN
 		//原文：https://blog.csdn.net/hou_yongkui/article/details/6148776
 		protected void DdlProvince_SelectedIndexChanged(object sender, EventArgs e)
 		{
