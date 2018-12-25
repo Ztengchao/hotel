@@ -20,6 +20,7 @@ namespace WEB
 				Bind();
 			}
 		}
+
 		/// <summary>
 		/// 绑定数据
 		/// </summary>
@@ -29,6 +30,7 @@ namespace WEB
 			Phone.Text = ((User)Session["user"]).Phone;
 			UsernameLabel.Text = ((User)Session["user"]).Username;
 		}
+
 		/// <summary>
 		/// 删除一行时执行
 		/// </summary>
@@ -45,6 +47,7 @@ namespace WEB
 			});
 			GuestTable.DataBind();
 		}
+
 		/// <summary>
 		/// 修改一行时执行
 		/// </summary>
@@ -72,6 +75,7 @@ namespace WEB
 			});
 			GuestTable.DataBind();
 		}
+
 		/// <summary>
 		/// 取消修改
 		/// </summary>
@@ -82,6 +86,22 @@ namespace WEB
 			GuestTable.EditIndex = -1;
 			GuestTable.DataBind();
 		}
+
+		#region 修改电话密码
+
+		/// <summary>
+		/// 点击修改按钮
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		protected void Change_Click(object sender, EventArgs e)
+		{
+			Name.ReadOnly = false;
+			Phone.ReadOnly = false;
+			ChangeDiv.Visible = false;
+			SureDiv.Visible = true;
+		}
+
 		/// <summary>
 		/// 保存姓名电话按钮
 		/// </summary>
@@ -99,7 +119,29 @@ namespace WEB
 			//更新数据库
 			UserManager.ChangeInfo((User)Session["user"]);
 			Bind();
+			SureDiv.Visible = false;
+			ChangeDiv.Visible = true;
+			Name.ReadOnly = true;
+			Phone.ReadOnly = true;
 		}
+
+		/// <summary>
+		/// 取消保存
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		protected void Cancle_Click(object sender, EventArgs e)
+		{
+			Name.Text = ((User)Session["user"]).Name;
+			Phone.Text = ((User)Session["user"]).Phone;
+			SureDiv.Visible = false;
+			ChangeDiv.Visible = true;
+			Name.ReadOnly = true;
+			Phone.ReadOnly = true;
+		}
+
+		#endregion
+
 		/// <summary>
 		/// 添加旅客按钮
 		/// </summary>
@@ -129,6 +171,7 @@ namespace WEB
 			}
 			GuestTable.DataBind();
 		}
+
 		#region 临时储存数据
 		protected void NameChanged(object sender, EventArgs e)
 		{

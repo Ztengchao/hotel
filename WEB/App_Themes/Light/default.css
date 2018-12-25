@@ -170,3 +170,32 @@
 .textbox {
     border-style: none
 }
+.pages
+{
+    color: #999;
+}
+.pages a, .pages .cpb
+{
+    text-decoration: none;
+    float: left;
+    padding: 0 5px;
+    border: 1px solid #075198;
+    background: #ffffff;
+    margin: 0 2px;
+    font-size: 11px;
+    color: #000;
+}
+.pages a:hover
+{
+    background-color: #075198;
+    color: #fff;
+    border: 1px solid #075198;
+    text-decoration: none;
+}
+.pages .cpb
+{
+    font-weight: bold;
+    color: #fff;
+    background: #075198;
+    border: 1px solid #075198;
+}

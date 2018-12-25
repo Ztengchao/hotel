@@ -49,13 +49,13 @@ namespace WEB {
         protected global::System.Web.UI.WebControls.DropDownList ddlCity;
         
         /// <summary>
-        /// requestedDeliveryDateInput 控件。
+        /// InTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox requestedDeliveryDateInput;
+        protected global::System.Web.UI.WebControls.TextBox InTime;
         
         /// <summary>
         /// calendar_show 控件。
@@ -76,22 +76,22 @@ namespace WEB {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl calendar;
         
         /// <summary>
-        /// requestedDeliveryDateCalendar 控件。
+        /// Select_InTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar requestedDeliveryDateCalendar;
+        protected global::System.Web.UI.WebControls.Calendar Select_InTime;
         
         /// <summary>
-        /// requestedDeliveryDateInput2 控件。
+        /// OutTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox requestedDeliveryDateInput2;
+        protected global::System.Web.UI.WebControls.TextBox OutTime;
         
         /// <summary>
         /// calendar_show2 控件。
@@ -112,13 +112,13 @@ namespace WEB {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl calendar2;
         
         /// <summary>
-        /// requestedDeliveryDateCalendar2 控件。
+        /// Select_OutTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar requestedDeliveryDateCalendar2;
+        protected global::System.Web.UI.WebControls.Calendar Select_OutTime;
         
         /// <summary>
         /// Search_Textbox 控件。
@@ -137,5 +137,23 @@ namespace WEB {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Search_Btn;
+        
+        /// <summary>
+        /// content 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl content;
+        
+        /// <summary>
+        /// Search_Result 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Wuqi.Webdiyer.AspNetPager Search_Result;
     }
 }

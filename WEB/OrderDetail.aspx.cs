@@ -24,7 +24,7 @@ namespace WEB
 			var order = OrderManager.GetOrderByOrderID(oID); //获得订单
 			if (order == null)
 			{
-				Response.Write("<script>alert('为查找到此订单！');location.href='Default.aspx';</script>"); //跳转到主页
+				Response.Write("<script>alert('未查找到此订单！');location.href='Default.aspx';</script>"); //跳转到主页
 				Response.End();
 			}
 			

@@ -7,19 +7,24 @@
         }
     </style>
     <div style="height: 40px">
-        <div style="float: left">昵称</div>
+        <div style="float: left">昵称：</div>
         <div style="float: left">
-            <asp:TextBox runat="server" ID="Name" Text="昵称" MaxLength="14"></asp:TextBox>
+            <asp:TextBox runat="server" ID="Name" ReadOnly="True" Text="昵称" MaxLength="14"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ValidationGroup="change_group" ControlToValidate="Name" ForeColor="red" ErrorMessage="请输入昵称" Display="Static">*</asp:RequiredFieldValidator>
         </div>
-        <div style="float: left; margin-left: 20px">电话</div>
+        <div style="float: left; margin-left: 20px">电话：</div>
         <div style="float: left">
-            <asp:TextBox runat="server" ID="Phone" Text="电话" MaxLength="11"></asp:TextBox>
+            <asp:TextBox runat="server" ID="Phone" ReadOnly="True" Text="电话" MaxLength="11"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ValidationGroup="change_group" ControlToValidate="phone" ForeColor="red" ErrorMessage="请输入电话" Display="Static">*</asp:RequiredFieldValidator>
         </div>
-        <div style="float: left; margin-left: 20px">
-            <asp:Button runat="server" Text="保存" ValidationGroup="change_group" ID="Save" OnClientClick="return confirm('保存？')" OnClick="Save_Click" />
-        </div>
+        <div style="float: left; margin-left: 20px;">
+            <div style="float: left; " runat="server" id="ChangeDiv">
+                <asp:Button runat="server" Text="修改" OnClick="Change_Click"/>
+            </div>
+            <div style="float: left;" runat="server" Visible="False" id="SureDiv">
+                <asp:Button runat="server" Text="保存" ValidationGroup="change_group" ID="Save" OnClick="Save_Click"/>
+                <asp:Button runat="server" Text="取消" OnClick="Cancle_Click"/>
+            </div></div>
         <div style="visibility: hidden; width: 0px; float: left">
             <!--临时储存数据-->
             <asp:Label ID="UsernameLabel" runat="server" Text="Label"></asp:Label>
@@ -33,7 +38,7 @@
     <div>
         <asp:GridView runat="server" AllowPaging="True" ID="GuestTable" EmptyDataText="无旅客" PageSize="15" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AllowSorting="True" OnRowCancelingEdit="GuestTable_RowCancelingEdit" OnRowDeleting="GuestTable_RowDeleting" OnRowUpdating="GuestTable_RowUpdating" ShowFooter="True">
             <Columns>
-                <asp:TemplateField HeaderText="旅客名" SortExpression="gName">
+                <asp:TemplateField HeaderText="姓名" SortExpression="gName">
                     <EditItemTemplate>
                         <asp:TextBox MaxLength="5" ID="TextBox1" runat="server" Text='<%# Bind("gName") %>'></asp:TextBox>
                     </EditItemTemplate>

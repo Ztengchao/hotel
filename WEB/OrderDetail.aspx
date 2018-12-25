@@ -5,44 +5,44 @@
             <table>
                 <tr>
                     <td>
-                        <asp:TextBox runat="server" ID="OrderID" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="OrderID" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="OrderPhone" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="OrderPhone" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox runat="server" ID="HotelName" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="HotelName" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="RoomName" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="RoomName" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox runat="server" ID="InTime" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="InTime" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="OutTime" CssClass="textbox" ReadOnly="True"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <asp:TextBox runat="server" ID="Address" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="OutTime" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:TextBox runat="server" ID="GuestInfo" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="Address" CssClass="textbox" ReadOnly="True"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:Label runat="server" ID="GuestInfo" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox runat="server" ID="OrderTime" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="OrderTime" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox runat="server" ID="OrderStatute" CssClass="textbox" ReadOnly="True"></asp:TextBox>
+                        <asp:Label runat="server" ID="OrderStatute" CssClass="textbox" ReadOnly="True"></asp:Label>
                     </td>
                 </tr>
             </table>

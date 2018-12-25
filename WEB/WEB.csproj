@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.5.1.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNetPager_CN.7.5.1\lib\AspNetPager.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -70,6 +73,7 @@
     <Content Include="404.html" />
     <Content Include="App_Themes\Light\default.css" />
     <Content Include="Global.asax" />
+    <Content Include="HotelDetail.aspx" />
     <Content Include="js\jquery.js" />
     <Content Include="Order.aspx" />
     <Content Include="OrderDetail.aspx" />
@@ -110,6 +114,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HotelDetail.aspx.cs">
+      <DependentUpon>HotelDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HotelDetail.aspx.designer.cs">
+      <DependentUpon>HotelDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

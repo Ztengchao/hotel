@@ -16,7 +16,7 @@ namespace WEB.@class
 		public static List<Order> GetOrderByUsername(User user)
 		{
 			var sql = "SELECT * FROM [Order] WHERE uAccount = @username ORDER BY InTime "; //查询订单
-			SqlParameter[] parameter = { new SqlParameter("@username", user.Username) };
+			SqlParameter[] parameter = {new SqlParameter("@username", user.Username)};
 			var u = SqlHelper.GetTable(sql, CommandType.Text, parameter);
 			var returnList = new List<Order>();
 			for (var i = 0; i < u.Rows.Count; i++) //返回订单
@@ -41,6 +41,7 @@ namespace WEB.@class
 
 			return returnList;
 		}
+
 		/// <summary>
 		/// 根据订单号返回订单
 		/// </summary>
@@ -49,7 +50,7 @@ namespace WEB.@class
 		public static Order GetOrderByOrderID(int OrderID)
 		{
 			var sql = "SELECT * FROM [Order] WHERE oID = @oID"; //查询订单
-			SqlParameter[] parameter = { new SqlParameter("@oID", OrderID) };
+			SqlParameter[] parameter = {new SqlParameter("@oID", OrderID)};
 			var u = SqlHelper.GetTable(sql, CommandType.Text, parameter);
 			if (u.Rows.Count == 0)
 			{
