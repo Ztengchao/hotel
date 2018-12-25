@@ -37,14 +37,12 @@ namespace WEB.@class
 		/// <returns></returns>
 		public static List<Hotel> GetHotelsBySearch(Dictionary<string, string> SearchString)
 		{
-			var InTime = SearchString["inTime"];
 			var Address = new string[2];
 			if (SearchString["address"] != "省份 城市")
 				Address = SearchString["address"].Split(' ');
 			var Text = SearchString["text"];
 			SqlParameter[] sqlParameters =
 			{
-				new SqlParameter("@InTime", "%" + InTime + "%"),
 				new SqlParameter("@Province", "%" + Address[0] + "%"),
 				new SqlParameter("@City", "%" + Address[1] + "%"),
 				new SqlParameter("@Text", "%" + Text + "%")
@@ -80,7 +78,6 @@ namespace WEB.@class
 		public static List<Hotel> GetHotelsBySearch(Dictionary<string, string> SearchString, int pagesize,
 			int currentpage)
 		{
-			var InTime = SearchString["inTime"];
 			var Address = new string[2];
 			if (SearchString["address"] != "省份 城市")
 				Address = SearchString["address"].Split(' ');
@@ -88,7 +85,6 @@ namespace WEB.@class
 			var rowLine = (currentpage - 1) * pagesize;
 			SqlParameter[] sqlParameters =
 			{
-				new SqlParameter("@InTime", "%" + InTime + "%"),
 				new SqlParameter("@Province", "%" + Address[0] + "%"),
 				new SqlParameter("@City", "%" + Address[1] + "%"),
 				new SqlParameter("@Text", "%" + Text + "%")

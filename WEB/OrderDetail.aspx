@@ -1,8 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true" CodeBehind="OrderDetail.aspx.cs" Inherits="WEB.WebOrderDetail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
+    <style type="text/css">
+        .tb td {
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+        }
+    </style>
     <div style="margin:0 auto;text-align:center;">
-        <div style="margin:0 auto; width: 600px">
-            <table>
+        <div style="margin:0 auto; width: 600px;text-align: left">
+            <table class="tb">
                 <tr>
                     <td>
                         <asp:Label runat="server" ID="OrderID" CssClass="textbox" ReadOnly="True"></asp:Label>

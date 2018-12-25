@@ -18,26 +18,6 @@
                             </div>
                         </div>
                         <div style="float: left; margin-left: 20px">
-                            <div style="float: left; height: 20px;">入住日期</div>
-                            <div style="float: left; margin-left: 10px">
-                                <asp:TextBox runat="server" ID="InTime" Width="70px" ReadOnly="True"></asp:TextBox>
-                                <asp:ImageButton runat="server" ID="calendar_show" Width="16px" Height="16px" OnClick="RequestedDeliveryDateInput_onclick" AlternateText="选择日期" ImageUrl="~/resource/images/calendar.png" />
-                                <div id="calendar" visible="false" runat="server" style="position: absolute">
-                                    <asp:Calendar ID="Select_InTime" runat="server" OnSelectionChanged="Select_InTime_SelectionChanged" BackColor="White" Width="300px" />
-                                </div>
-                            </div>
-                        </div>
-                        <div style="float: left; margin-left: 20px">
-                            <div style="float: left">退房日期</div>
-                            <div style="float: left; margin-left: 10px">
-                                <asp:TextBox runat="server" ID="OutTime" Width="70px" ReadOnly="True"></asp:TextBox>
-                                <asp:ImageButton runat="server" ID="calendar_show2" Width="16px" Height="16px" OnClick="RequestedDeliveryDateInput_onclick2" AlternateText="选择日期" ImageUrl="~/resource/images/calendar.png" />
-                                <div id="calendar2" visible="false" runat="server" style="position: absolute">
-                                    <asp:Calendar ID="Select_OutTime" runat="server" OnSelectionChanged="Select_OutTime_SelectionChanged" BackColor="White" Width="300px" />
-                                </div>
-                            </div>
-                        </div>
-                        <div style="float: left; margin-left: 20px">
                             <asp:TextBox runat="server" ID="Search_Textbox"></asp:TextBox>
                         </div>
                     </ContentTemplate>

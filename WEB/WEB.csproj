@@ -83,6 +83,7 @@
     <Content Include="resource\images\home_light.png" />
     <Content Include="resource\images\search_light.png" />
     <Content Include="resource\Province.xml" />
+    <Content Include="RoomDetail.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -163,6 +164,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoomDetail.aspx.cs">
+      <DependentUpon>RoomDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoomDetail.aspx.designer.cs">
+      <DependentUpon>RoomDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Search.aspx.cs">
       <DependentUpon>Search.aspx</DependentUpon>

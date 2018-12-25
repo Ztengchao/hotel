@@ -28,7 +28,7 @@ namespace WEB
 				Response.End();
 			}
 			
-			if (order.Username != ((User)Session["user"]).Name) //订单中的用户名与当前登录的用户名不相等
+			if (order.Username != ((User)Session["user"]).Username) //订单中的用户名与当前登录的用户名不相等
 			{
 				Response.Write("<script>alert('当前账户不包含此订单！');location.href='Default.aspx';</script>"); //跳转到主页
 				Response.End();
@@ -39,11 +39,11 @@ namespace WEB
 			OrderPhone.Text = "联系电话：" + order.OrderPhone;
 			HotelName.Text = "酒店：" + order.HotelName;
 			RoomName.Text = "房间：" + order.RoomName;
-			InTime.Text = "入住时间：" + order.InTime;
-			OutTime.Text = "离开时间：" + order.OutTime;
-			Address.Text = "酒店地址" + hotel.HotelAddress;
+			InTime.Text = "入住时间：" + order.InTime.ToShortDateString();
+			OutTime.Text = "离开时间：" + order.OutTime.ToShortDateString();
+			Address.Text = "酒店地址：" + hotel.HotelAddress;
 			GuestInfo.Text = "旅客信息：" + order.OrderInfo;
-			OrderTime.Text = "下单时间：" + order.OrderTime;
+			OrderTime.Text = "下单时间：" + order.OrderTime.ToString("yyyy-MM-dd HH:mm:ss");
 			switch (order.OrderState)
 			{
 				case '1':

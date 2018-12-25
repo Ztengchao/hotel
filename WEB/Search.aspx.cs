@@ -93,45 +93,6 @@ namespace WEB
 
 		#endregion
 
-		#region 日期选择
-
-		/// <summary>
-		/// 选择日期，通过AJAX触发
-		/// </summary>
-		protected void Select_InTime_SelectionChanged(object sender, EventArgs eventArgs)
-		{
-			InTime.Text = Select_InTime.SelectedDate.ToShortDateString();
-			// 隐藏日历
-			calendar.Visible = false;
-			//设置日历下textbox的焦点，方便用户输入。移除或改变下行代码设置为您自己的控件
-			//someTextBox.Focus();
-		}
-
-		protected void Select_OutTime_SelectionChanged(object sender, EventArgs eventArgs)
-		{
-			OutTime.Text = Select_OutTime.SelectedDate.ToShortDateString();
-			// 隐藏日历
-			calendar2.Visible = false;
-			//设置日历下textbox的焦点，方便用户输入。移除或改变下行代码设置为您自己的控件
-			//someTextBox.Focus();
-		}
-
-		protected void RequestedDeliveryDateInput_onclick(object sender, EventArgs eventArgs)
-		{
-			if (calendar2.Visible)
-				calendar2.Visible = false;
-			calendar.Visible = !calendar.Visible;
-		}
-
-		protected void RequestedDeliveryDateInput_onclick2(object sender, EventArgs eventArgs)
-		{
-			if (calendar.Visible)
-				calendar.Visible = false;
-			calendar2.Visible = !calendar2.Visible;
-		}
-
-		#endregion
-
 		/// <summary>
 		/// 按下搜索按钮
 		/// </summary>
@@ -139,31 +100,14 @@ namespace WEB
 		/// <param name="e"></param>
 		protected void Search_Btn_Click(object sender, EventArgs e)
 		{
-			try
-			{
-				if (InTime.Text != "" && OutTime.Text != "" &&
-				    Convert.ToDateTime(InTime.Text) >= Convert.ToDateTime(OutTime.Text))
-				{
-					Response.Write("<script>alert('入住时间需大于离开时间！')</script>");
-					return;
-				}
-			}
-			catch
-			{
-				Response.Write("<script>alert('时间格式不对！')</script>");
-				return;
-			}
-
 			var SearchString = new Dictionary<string, string>
 			{
-				{"inTime", InTime.Text.Trim()},
-				{"outTime", OutTime.Text.Trim()},
 				{"text", Search_Textbox.Text.Trim()},
 				{"address", ddlProvince.SelectedValue.Trim() + " " + ddlCity.SelectedValue.Trim()}
 			};
 			var count = HotelManager.GetHotelsBySearch(SearchString).Count;
 			Search_Result.RecordCount = count;
-			Bind(1,SearchString);
+			Bind(1, SearchString);
 		}
 
 		/// <summary>
@@ -175,8 +119,6 @@ namespace WEB
 		{
 			var SearchString = new Dictionary<string, string>
 			{
-				{"inTime", InTime.Text.Trim()},
-				{"outTime", OutTime.Text.Trim()},
 				{"text", Search_Textbox.Text.Trim()},
 				{"address", ddlProvince.SelectedValue.Trim() + " " + ddlCity.SelectedValue.Trim()}
 			};
@@ -196,17 +138,17 @@ namespace WEB
 			foreach (var t in value)
 			{
 				content.InnerHtml += "<div style=\"width: 33.33%; float: left;\">" +
-									 "<div style=\"width: 200px; margin: 0 auto\">" +
-									 "<div style=\"height: 200px; width: 200px\">" +
-									 "<img style=\"height: 200px; width: 200px\" src=\"" + t.HotelPicture + "\"/>" +
-									 "</div>" +
-									 "<div style=\"width: 200px\">" +
-									 "<a href=\"HotelDetail.aspx?HotelID=" + t.HotelID + "\">" + t.HotelName + "</a>" +
-									 "</div>" +
-									 "<div style=\"width: 200px\" >" +
-									 "<div Width=\"200px\">" + t.HotelAddress + "</div>" +
-									 "</div>" +
-									 "</div>" +
+									 "	<div style=\"width: 200px; margin: 0 auto\">" +
+									 "		<div style=\"height: 200px; width: 200px\">" +
+									 "			<img style=\"height: 200px; width: 200px\" src=\"" + t.HotelPicture + "\"/>" +
+									 "		</div>" +
+									 "		<div style=\"width: 200px\">" +
+									 "			<a href=\"HotelDetail.aspx?HotelID=" + t.HotelID + "\">" + t.HotelName + "</a>" +
+									 "		</div>" +
+									 "		<div style=\"width: 200px\" >" +
+									 "			<div Width=\"200px\">" + t.HotelAddress + "</div>" +
+									 "		</div>" +
+									 "	</div>" +
 									 "</div>";
 			}
 

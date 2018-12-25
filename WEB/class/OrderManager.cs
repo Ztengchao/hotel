@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace WEB.@class
 {
@@ -73,6 +74,29 @@ namespace WEB.@class
 				HotelName = HotelManager.GetHotelByID(room.HotelID).HotelName,
 				OrderTime = Convert.ToDateTime(u.Rows[0][9])
 			};
+		}
+
+		/// <summary>
+		/// 增加订单
+		/// </summary>
+		/// <param name="order">订单</param>
+		public static void AddOrder(Order order)
+		{
+			SqlParameter[] sqlParameters =
+			{
+				new SqlParameter("@roomID", order.RoomID),
+				new SqlParameter("@userAccount", order.Username),
+				new SqlParameter("@orderPhone", order.OrderPhone),
+				new SqlParameter("@orderInfo", order.OrderInfo),
+				new SqlParameter("@InTime", order.InTime.ToShortDateString()),
+				new SqlParameter("@OutTime", order.OutTime.ToShortDateString()),
+				new SqlParameter("@orderRemark", order.OrderRemark),
+				new SqlParameter("@orderState", order.OrderState),
+				new SqlParameter("@orderTime", order.OrderTime.ToString("yyyy-MM-dd HH:mm:ss.f"))
+			};
+			var sql = "INSERT INTO [Order](rID,uAccount,oInfo,oPhone,InTime,OutTime,oRemark,oStat,oTime) " +
+			          "VALUES (@roomID,@userAccount,@orderInfo,@orderPhone,@InTime,@OutTime,@orderRemark,@orderState,@orderTime)";
+			SqlHelper.ExecuteNonQuery(sql, CommandType.Text, sqlParameters);
 		}
 	}
 }
