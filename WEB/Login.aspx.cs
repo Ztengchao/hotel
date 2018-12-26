@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using WEB.@class;
 
@@ -11,6 +12,11 @@ namespace WEB
 		{
 
 		}
+		/// <summary>
+		/// 登陆成功跳转到首页
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		protected void LoginButton_Click(object sender, EventArgs e)
 		{
 			if (IsValid)
@@ -19,6 +25,11 @@ namespace WEB
 			}
 		}
 
+		/// <summary>
+		/// 检查是否登录成功
+		/// </summary>
+		/// <param name="source"></param>
+		/// <param name="args"></param>
 		protected void CheckLogin_ServerValidate(object source, ServerValidateEventArgs args)
 		{
 			try
@@ -43,6 +54,22 @@ namespace WEB
 			{
 				args.IsValid = false;
 			}
+		}
+
+		/// <summary>
+		/// 判断验证码是否正确
+		/// </summary>
+		/// <param name="source"></param>
+		/// <param name="args"></param>
+		protected void VerifyValidate(object source, ServerValidateEventArgs args) => args.IsValid = string.Equals(Convert.ToString(args.Value), Session["VerificationCode"].ToString(), StringComparison.CurrentCultureIgnoreCase);
+		/// <summary>
+		/// 点击验证码更换图片
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		protected void VerifyImg_Click(object sender, ImageClickEventArgs e)
+		{
+			VerifyImg.ImageUrl = "ValidateCode.aspx";
 		}
 	}
 }

@@ -85,6 +85,7 @@
     <Content Include="resource\Province.xml" />
     <Content Include="RoomDetail.aspx" />
     <Content Include="Search.aspx" />
+    <Content Include="ValidateCode.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -178,6 +179,13 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.designer.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

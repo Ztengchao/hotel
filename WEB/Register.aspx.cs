@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using WEB.@class;
 
 namespace WEB
@@ -26,8 +28,22 @@ namespace WEB
 			}
 			catch //抛出错误说明用户存在
 			{
-				Response.Write(" <script language=javascript>confirm('该用户已存在，点击确定前往登录');location.href='Login.aspx';</script> ");
+				Response.Write(
+					" <script language=javascript>confirm('该用户已存在，点击确定前往登录');location.href='Login.aspx';</script> ");
 			}
 		}
+
+		#region 验证码
+
+		protected void VerifyValidate(object source, ServerValidateEventArgs args) => args.IsValid =
+			string.Equals(Convert.ToString(args.Value), Session["VerificationCode"].ToString(),
+				StringComparison.CurrentCultureIgnoreCase);
+
+		protected void VerifyImg_Click(object sender, ImageClickEventArgs e)
+		{
+			VerifyImg.ImageUrl = "ValidateCode.aspx";
+		}
+
+		#endregion
 	}
 }

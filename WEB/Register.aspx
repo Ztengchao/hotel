@@ -4,14 +4,16 @@
     <div >
         <table class="register" align="center">
             <tr style="height: 40px">
-                <td style="text-align: right;">昵称:
+                <td style="text-align: right;">
+                    昵称:
                 </td>
                 <td>
                     <asp:TextBox ID="Name" CssClass="register_text" runat="server" MaxLength="14"></asp:TextBox>
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right;">用户名:
+                <td style="text-align: right;">
+                    用户名:
                 </td>
                 <td>
                     <asp:TextBox ID="UserName" CssClass="register_text" runat="server"></asp:TextBox>
@@ -22,7 +24,8 @@
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right">密码:
+                <td style="text-align: right">
+                    密码:
                 </td>
                 <td>
                     <asp:TextBox ID="PassWord" CssClass="register_text" runat="server" TextMode="Password"></asp:TextBox>
@@ -33,7 +36,8 @@
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right">重复密码:
+                <td style="text-align: right">
+                    重复密码:
                 </td>
                 <td>
                     <asp:TextBox runat="server" CssClass="register_text" TextMode="Password" ID="SurePassWord"/>
@@ -44,7 +48,8 @@
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right">电话:
+                <td style="text-align: right">
+                    电话:
                 </td>
                 <td>
                     <asp:TextBox runat="server" CssClass="register_text" ID="Telephone"></asp:TextBox>
@@ -52,6 +57,19 @@
                 <td style="text-align: left">
                     <asp:RequiredFieldValidator runat="server" ValidationGroup="register_group" ControlToValidate="Telephone" ForeColor="red" ErrorMessage="请输入电话" Display="Dynamic">*</asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator runat="server" ValidationGroup="register_group" ControlToValidate="Telephone" ForeColor="red" ErrorMessage="电话格式不正确" ValidationExpression="\d{11}"></asp:RegularExpressionValidator>
+                </td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: right">
+                    验证码:
+                </td>
+                <td>
+                    <asp:TextBox runat="server" CssClass="register_text" ID="VerifyCode"></asp:TextBox>
+                </td>
+                <td style="text-align: left">
+                    <asp:ImageButton Height="40px" Width="110px" ID="VerifyImg" ImageUrl="ValidateCode.aspx" runat="server" OnClick="VerifyImg_Click"/>
+                    <asp:RequiredFieldValidator ID="c" runat="server" ValidationGroup="register_group" ControlToValidate="VerifyCode" ForeColor="red" ErrorMessage="请输入验证码" Display="Dynamic">*</asp:RequiredFieldValidator>
+                    <asp:CustomValidator runat="server" ID="d" ErrorMessage="验证码不正确" ForeColor="red" ValidationGroup="register_group" ControlToValidate="VerifyCode" OnServerValidate="VerifyValidate"></asp:CustomValidator>
                 </td>
             </tr>
             <tr style="height: 40px">
