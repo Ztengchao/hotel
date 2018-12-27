@@ -68,6 +68,7 @@ CREATE TABLE [Order]( --订单
 	OutTime date NOT NULL, --离开时间
 	oRemark varchar(50) NULL, --用户备注
 	oStat char(1) NOT NULL DEFAULT('1'), --订单状态，1-已下单，2-酒店已确定，3-已完成的订单，4-已取消的订单
+	oTime datetime NOT NULL, --下单时间
 	CONSTRAINT CK_Order CHECK  (OutTime>InTime)
 )
 GO
