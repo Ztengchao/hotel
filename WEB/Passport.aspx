@@ -7,12 +7,12 @@
         }
     </style>
     <div style="height: 40px">
-        <div style="float: left">昵称：</div>
+        <div style="float: left;color: white">昵称：</div>
         <div style="float: left">
             <asp:TextBox runat="server" ID="Name" ReadOnly="True" Text="昵称" MaxLength="14"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ValidationGroup="change_group" ControlToValidate="Name" ForeColor="red" ErrorMessage="请输入昵称" Display="Static">*</asp:RequiredFieldValidator>
         </div>
-        <div style="float: left; margin-left: 20px">电话：</div>
+        <div style="float: left; margin-left: 20px;color: white">电话：</div>
         <div style="float: left">
             <asp:TextBox runat="server" ID="Phone" ReadOnly="True" Text="电话" MaxLength="11"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ValidationGroup="change_group" ControlToValidate="phone" ForeColor="red" ErrorMessage="请输入电话" Display="Static">*</asp:RequiredFieldValidator>
@@ -36,49 +36,51 @@
         </div>
     </div>
     <div>
-        <asp:GridView runat="server" AllowPaging="True" ID="GuestTable" EmptyDataText="无旅客" PageSize="15" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AllowSorting="True" OnRowCancelingEdit="GuestTable_RowCancelingEdit" OnRowDeleting="GuestTable_RowDeleting" OnRowUpdating="GuestTable_RowUpdating" ShowFooter="True">
+        <asp:GridView runat="server" ForeColor="white" AllowPaging="True" ID="GuestTable" EmptyDataText="无旅客" PageSize="15" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AllowSorting="True" OnRowCancelingEdit="GuestTable_RowCancelingEdit" OnRowDeleting="GuestTable_RowDeleting" OnRowUpdating="GuestTable_RowUpdating">
             <Columns>
                 <asp:TemplateField HeaderText="姓名" SortExpression="gName">
                     <EditItemTemplate>
-                        <asp:TextBox MaxLength="5" ID="TextBox1" runat="server" Text='<%# Bind("gName") %>'></asp:TextBox>
+                        <asp:TextBox Width="157.6px" MaxLength="5" ID="TextBox1" runat="server" Text='<%# Bind("gName") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("gName") %>'></asp:Label>
+                        <asp:Label Width="157.6px" ID="Label1" ForeColor="white" runat="server" Text='<%# Bind("gName") %>'></asp:Label>
                     </ItemTemplate>
-                    <FooterTemplate>
-                        <asp:TextBox OnTextChanged="NameChanged" MaxLength="5" runat="server" Text="填写旅客名"></asp:TextBox>
-                    </FooterTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="身份证号" SortExpression="gID">
+                <asp:TemplateField  HeaderText="身份证号" SortExpression="gID">
                     <EditItemTemplate>
-                        <asp:TextBox MaxLength="14" ID="TextBox2" runat="server" Text='<%# Bind("gID") %>'></asp:TextBox>
+                        <asp:TextBox Width="157.6px" MaxLength="14" ID="TextBox2" runat="server" Text='<%# Bind("gID") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("gID") %>'></asp:Label>
+                        <asp:Label Width="157.6px" ID="Label2" ForeColor="white" runat="server" Text='<%# Bind("gID") %>'></asp:Label>
                     </ItemTemplate>
-                    <FooterTemplate>
-                        <asp:TextBox OnTextChanged="IDChanged" runat="server" MaxLength="14" Text="填写身份证号"></asp:TextBox>
-                    </FooterTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="False">
                     <EditItemTemplate>
-                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="更新"></asp:LinkButton>
-                        &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" Text="取消"></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" ForeColor="white" runat="server" CausesValidation="True" CommandName="Update" Text="更新"></asp:LinkButton>
+                        &nbsp;<asp:LinkButton ID="LinkButton2" ForeColor="white" runat="server" CausesValidation="False" CommandName="Cancel" Text="取消"></asp:LinkButton>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Edit" Text="编辑"></asp:LinkButton>
+                        <asp:LinkButton ForeColor="white" ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Edit" Text="编辑"></asp:LinkButton>
                     </ItemTemplate>
-                    <FooterTemplate>
-                        <asp:LinkButton ID="AddButton" OnClick="AddButton_OnClick" runat="server" Text="添加"></asp:LinkButton>
-                    </FooterTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="False">
                     <ItemTemplate>
-                        <asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="False" CommandName="Delete" Text="删除" OnClientClick="return confirm('确定删除？')"></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton3" ForeColor="white" runat="server" CausesValidation="False" CommandName="Delete" Text="删除" OnClientClick="return confirm('确定删除？')"></asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+        <div>
+            <div style="float: left;width: 150px">
+                <asp:TextBox OnTextChanged="NameChanged" MaxLength="5" runat="server" Text="填写旅客名"></asp:TextBox>
+            </div>
+            <div style="float: left;width: 150px">
+                <asp:TextBox OnTextChanged="IDChanged" runat="server" MaxLength="14" Text="填写身份证号"></asp:TextBox>
+            </div>
+            <div style="float: left;width: 50px">
+                <asp:LinkButton ForeColor="white" ID="AddButton" OnClick="AddButton_OnClick" runat="server" Text="添加"></asp:LinkButton>
+            </div>
+        </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:hotelConnectionString %>" SelectCommand="SELECT [gName], [gID] FROM [Guest] WHERE ([uAccount] = @uAccount)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="UsernameLabel" Name="uAccount" PropertyName="Text" Type="String" />

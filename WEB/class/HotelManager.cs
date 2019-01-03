@@ -37,18 +37,17 @@ namespace WEB.@class
 		/// <returns></returns>
 		public static List<Hotel> GetHotelsBySearch(Dictionary<string, string> SearchString)
 		{
-			var Address = new string[2];
+			var Address = "";
 			if (SearchString["address"] != "省份 城市")
-				Address = SearchString["address"].Split(' ');
+				Address = SearchString["address"];
 			var Text = SearchString["text"];
 			SqlParameter[] sqlParameters =
 			{
-				new SqlParameter("@Province", "%" + Address[0] + "%"),
-				new SqlParameter("@City", "%" + Address[1] + "%"),
+				new SqlParameter("@City", "%" + Address + "%"),
 				new SqlParameter("@Text", "%" + Text + "%")
 			};
 			var sql =
-				"SELECT * FROM [Hotel] WHERE hAddress LIKE @City AND hAddress LIKE @Province AND hName LIKE @Text";
+				"SELECT * FROM [Hotel] WHERE hAddress LIKE @City AND hName LIKE @Text";
 			var u = SqlHelper.GetTable(sql, CommandType.Text, sqlParameters);
 			var returnList = new List<Hotel>();
 			for (var i = 0; i < u.Rows.Count; i++)
@@ -78,23 +77,22 @@ namespace WEB.@class
 		public static List<Hotel> GetHotelsBySearch(Dictionary<string, string> SearchString, int pagesize,
 			int currentpage)
 		{
-			var Address = new string[2];
-			if (SearchString["address"] != "省份 城市")
-				Address = SearchString["address"].Split(' ');
+		    var Address = "";
+			if (SearchString["address"] != "城市")
+				Address = SearchString["address"];
 			var Text = SearchString["text"];
 			var rowLine = (currentpage - 1) * pagesize;
 			SqlParameter[] sqlParameters =
 			{
-				new SqlParameter("@Province", "%" + Address[0] + "%"),
-				new SqlParameter("@City", "%" + Address[1] + "%"),
+				new SqlParameter("@City", "%" + Address + "%"),
 				new SqlParameter("@Text", "%" + Text + "%")
 			};
 			var sql =
 				"SELECT TOP " + pagesize + " * " +
 				"FROM [Hotel] " +
-				"WHERE (hAddress LIKE @City ) AND (hAddress LIKE @Province) AND (hName LIKE @Text) AND hID NOT IN " +
+				"WHERE (hAddress LIKE @City ) AND (hName LIKE @Text) AND hID NOT IN " +
 				"(SELECT TOP " + rowLine +
-				" hID FROM [Hotel] WHERE (hAddress LIKE @City ) AND (hAddress LIKE @Province ) AND (hName LIKE @Text ) ORDER BY hID)" +
+				" hID FROM [Hotel] WHERE (hAddress LIKE @City ) AND (hName LIKE @Text ) ORDER BY hID)" +
 				"ORDER BY hID";
 			var u = SqlHelper.GetTable(sql, CommandType.Text, sqlParameters);
 			var returnList = new List<Hotel>();

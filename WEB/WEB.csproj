@@ -79,7 +79,9 @@
     <Content Include="OrderDetail.aspx" />
     <Content Include="Passport.aspx" />
     <Content Include="resource\images\404.jpg" />
+    <Content Include="resource\images\bgpic.png" />
     <Content Include="resource\images\calendar.png" />
+    <Content Include="resource\images\default.jpg" />
     <Content Include="resource\images\home_light.png" />
     <Content Include="resource\images\search_light.png" />
     <Content Include="resource\Province.xml" />

@@ -66,12 +66,12 @@ namespace WEB
 				                   "	</div>" +
 				                   "	<div style=\"float: left;width: 80%\">" +
 				                   "		<div style=\"height:30px;\">" +
-								   "			<div style=\"float: left;margin-left:10px;width:180px\">类型：" + t1.RoomName + "</div>" +
-								   "			<div style=\"float: left;margin-left:10px\">价格：" + t1.Value + "</div>" +
+								   "			<div style=\"float: left;margin-left:10px;width:180px;color:white\">类型：" + t1.RoomName + "</div>" +
+                                   "			<div style=\"float: left;margin-left:10px;color:white\">价格：" + t1.Value + "</div>" +
 				                   "		</div>" +
 								   "		<div style=\"height:30px;\">" +
-								   "			<div style=\"float: left;margin-left:10px;width:180px\">可入住人数：" + t1.People + "</div>" +
-								   "			<div style=\"float: left;margin-left:10px;\">余量：" + t1.Amount + "</div>" +
+                                   "			<div style=\"float: left;margin-left:10px;width:180px;color:white\">可入住人数：" + t1.People + "</div>" +
+                                   "			<div style=\"float: left;margin-left:10px;color:white\">余量：" + t1.Amount + "</div>" +
 				                   "		</div>" +
 				                   "	</div>" +
 				                   "</div>";

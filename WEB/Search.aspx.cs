@@ -103,7 +103,7 @@ namespace WEB
 			var SearchString = new Dictionary<string, string>
 			{
 				{"text", Search_Textbox.Text.Trim()},
-				{"address", ddlProvince.SelectedValue.Trim() + " " + ddlCity.SelectedValue.Trim()}
+				{"address", ddlCity.SelectedValue.Trim()}
 			};
 			var count = HotelManager.GetHotelsBySearch(SearchString).Count;
 			Search_Result.RecordCount = count;
@@ -143,10 +143,10 @@ namespace WEB
 									 "			<img style=\"height: 200px; width: 200px\" src=\"" + t.HotelPicture + "\"/>" +
 									 "		</div>" +
 									 "		<div style=\"width: 200px\">" +
-									 "			<a href=\"HotelDetail.aspx?HotelID=" + t.HotelID + "\">" + t.HotelName + "</a>" +
+									 "			<a style=\"color:red\" href=\"HotelDetail.aspx?HotelID=" + t.HotelID + "\">" + t.HotelName + "</a>" +
 									 "		</div>" +
 									 "		<div style=\"width: 200px\" >" +
-									 "			<div Width=\"200px\">" + t.HotelAddress + "</div>" +
+									 "			<div style=\"width:200px;color:white\">" + t.HotelAddress + "</div>" +
 									 "		</div>" +
 									 "	</div>" +
 									 "</div>";

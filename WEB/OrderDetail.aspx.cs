@@ -44,19 +44,20 @@ namespace WEB
 			Address.Text = "酒店地址：" + hotel.HotelAddress;
 			GuestInfo.Text = "旅客信息：" + order.OrderInfo;
 			OrderTime.Text = "下单时间：" + order.OrderTime.ToString("yyyy-MM-dd HH:mm:ss");
+			OrderStatute.Text = "订单详情：";
 			switch (order.OrderState)
 			{
 				case '1':
-					OrderStatute.Text = "等待处理";
+					OrderStatute.Text += "等待处理";
 					return;
 				case '2':
-					OrderStatute.Text = "酒店已确认";
+					OrderStatute.Text += "酒店已确认";
 					return;
 				case '3':
-					OrderStatute.Text = "已完成";
+					OrderStatute.Text += "已完成";
 					return;
 				case '4':
-					OrderStatute.Text = "已取消";
+					OrderStatute.Text += "已取消";
 					return;
 			}
 		}

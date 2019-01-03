@@ -14,4 +14,4 @@
 
 <asp:ImageButton SkinID="Search_pic" CssClass="header_search_pic" runat="server" AlternateText="搜索" ImageUrl="~/resource/images/search_light.png"/>
 <asp:ImageButton runat="server" SkinID="back_home" CssClass="header_home_img" Height="24px" ImageUrl="~/resource/images/home_light.png"/>
-<asp:Button runat="server" SkinID="loged_in" Font-Underline="True" CssClass="header_logined_in" BackColor="white"/>
+<asp:Button runat="server" SkinID="loged_in" Font-Underline="True" CssClass="header_logined_in"/>

@@ -9,7 +9,7 @@
     <title>XXX酒店预订</title>
     <script src="js/jquery.js" type="text/javascript"></script>
 </head>
-<body>
+<body style="background-image: url(resource/images/bgpic.png); background-size: 100%;">
     <form id="form1" runat="server">
         <!--头部开始-->
         <div id="header" class="header">

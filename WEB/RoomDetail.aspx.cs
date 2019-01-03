@@ -152,6 +152,11 @@ namespace WEB
 		{
 			if(!Page.IsValid)
 				return;
+		    if (Session["user"] == null)
+		    {
+		        Response.Write("<script>alert('您还未登录！');location.href='Login.aspx';</script>"); //跳转到登录界面
+		        Response.End();
+		    }
 			char[] m = { '，', ' ' };
 			var x = GuestName.Text.Split(m, StringSplitOptions.None);
 			var order = new Order

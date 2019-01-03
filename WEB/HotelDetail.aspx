@@ -8,19 +8,19 @@
             </div>
             <div style="margin-left: 30px; float: left">
                 <div>
-                    <asp:Label runat="server" ID="Name"></asp:Label>
+                    <asp:Label runat="server" ForeColor="white" ID="Name"></asp:Label>
                 </div>
                 <div>
-                    <asp:Label runat="server" ID="Address"></asp:Label>
+                    <asp:Label runat="server" ForeColor="white" ID="Address"></asp:Label>
                 </div>
                 <div>
-                    <asp:Label runat="server" ID="Introduce"></asp:Label>
+                    <asp:Label runat="server" ForeColor="white" ID="Introduce"></asp:Label>
                 </div>
                 <div>
-                    <div style="float: left">联系电话：</div>
+                    <div style="float: left;color: white">联系电话：</div>
                     <div style="float: left">
-                        <asp:Label runat="server" ID="Phone1"></asp:Label><br />
-                        <asp:Label runat="server" ID="Phone2"></asp:Label>
+                        <asp:Label runat="server" ForeColor="white" ID="Phone1"></asp:Label><br />
+                        <asp:Label runat="server" ForeColor="white" ID="Phone2"></asp:Label>
                     </div>
                 </div>
             </div>

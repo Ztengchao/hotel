@@ -11,7 +11,7 @@
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <div style="float: left">
-                            <div style="float: left">目的地</div>
+                            <div style="float: left; color: white;font-weight: bold">目的地</div>
                             <div style="float: left; margin-left: 10px">
                                 <asp:DropDownList ID="ddlProvince" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DdlProvince_SelectedIndexChanged" />
                                 <asp:DropDownList ID="ddlCity" runat="server" />
@@ -31,7 +31,7 @@
             <div runat="server" style="height: 500px" ID="content" >
                 </div>
             <div style="text-align: center;">
-                <webdiyer:AspNetPager ID="Search_Result" CssClass="pages" CurrentPageButtonClass="cpb" runat="server" CurrentPageButtonPosition="Center" NumericButtonCount="5" PagingButtonType="Text" ShowDisabledButtons="True" OnPageChanged="Search_Result_PageChanged" PageSize="6">
+                <webdiyer:AspNetPager ID="Search_Result" CssClass="pages" runat="server" CurrentPageButtonPosition="Center" NumericButtonCount="5" PagingButtonType="Text" ShowDisabledButtons="True" OnPageChanged="Search_Result_PageChanged" PageSize="6">
                 </webdiyer:AspNetPager>
             </div>
         </div>

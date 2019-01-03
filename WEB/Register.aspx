@@ -4,7 +4,7 @@
     <div >
         <table class="register" align="center">
             <tr style="height: 40px">
-                <td style="text-align: right;">
+                <td style="text-align: right;color: white">
                     昵称:
                 </td>
                 <td>
@@ -12,7 +12,7 @@
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right;">
+                <td style="text-align: right;color: white">
                     用户名:
                 </td>
                 <td>
@@ -24,7 +24,7 @@
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right">
+                <td style="text-align: right;color: white">
                     密码:
                 </td>
                 <td>
@@ -36,7 +36,7 @@
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right">
+                <td style="text-align: right;color: white">
                     重复密码:
                 </td>
                 <td>
@@ -48,7 +48,7 @@
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right">
+                <td style="text-align: right;color: white">
                     电话:
                 </td>
                 <td>
@@ -60,7 +60,7 @@
                 </td>
             </tr>
             <tr style="height: 40px">
-                <td style="text-align: right">
+                <td style="text-align: right;color: white">
                     验证码:
                 </td>
                 <td>

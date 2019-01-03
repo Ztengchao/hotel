@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
     <div style="text-align: center">
         <div style="display: inline-block">
-            <asp:GridView runat="server" AllowPaging="True" EmptyDataText="无订单数据" PageSize="15" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1">
+            <asp:GridView runat="server" ForeColor="White" AllowPaging="True" EmptyDataText="无订单数据" PageSize="15" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1">
                 <Columns>
                     <asp:TemplateField HeaderText="序号">
                         <ItemTemplate>
@@ -48,7 +48,11 @@
                             <asp:Label ID="Label4" runat="server" Text='<%# Convert.ToDateTime(Eval("OrderTime")).ToShortDateString() %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:HyperLinkField HeaderText="详情" Text="详情" DataNavigateUrlFields="OrderID" DataNavigateUrlFormatString="OrderDetail.aspx?id={0}" />
+                    <asp:TemplateField HeaderText="详情">
+                        <ItemTemplate>
+                            <asp:HyperLink ID="HyperLink1" ForeColor="white" runat="server" NavigateUrl='<%# Eval("OrderID", "OrderDetail.aspx?id={0}") %>' Text="详情"></asp:HyperLink>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
             <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetOrderByUsername" TypeName="WEB.class.OrderManager">
